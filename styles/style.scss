@@ -1,0 +1,406 @@
+@import url('../styles/fonts.css');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    transition: all 0.5s;
+  }
+}
+
+
+$c-grey: #828282;
+$c-dark-grey: #070707;
+$c-light-grey: #F6F6F6;
+
+body {
+  font-family: GilroyRegular;
+  color: $c-dark-grey;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  margin: 0;
+}
+
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h2 {
+  font-family: GilroyBold;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.cont-img {
+  width: 100%;
+}
+
+.header-wrapper {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $c-grey;
+
+    a {
+      font-family: GilroyBold;
+      font-weight: bold;
+      color: $c-grey;
+      padding: 32px 0 42px 0;
+
+      &:hover {
+        color: $c-dark-grey;
+      }
+    }
+  }
+}
+
+.main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 40px 15px 50px 15px;
+
+  h1 {
+    font-size: 47px;
+    line-height: 59px;
+    max-width: 150px;
+    font-family: GilroyBold;
+    font-weight: bold;
+  }
+}
+
+.main-info__lang-switcher {
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    display: inline-block;
+    transform: rotate(-90deg);
+    padding: 10px;
+    margin: -10px;
+    transform-origin: top;
+    font-family: GilroyBold;
+    font-weight: bold;
+    cursor: pointer;
+
+    .lang {
+      color: $c-grey;
+
+
+      &:hover {
+        color: $c-dark-grey;
+      }
+    }
+
+    .active-lang {
+      color: $c-dark-grey;
+
+      &:hover {
+        color: $c-dark-grey;
+      }
+    }
+  }
+}
+
+.overview {
+  background-color: $c-light-grey;
+  padding: 120px 0 107px 0;
+  margin-top: 104px;
+
+  p {
+    padding: 50px 0 0 0;
+
+    &:first-of-type {
+      padding: 40px 0 0 0;
+    }
+  }
+}
+
+.skills {
+  padding: 91px 15px 92px 15px;
+
+  p {
+
+    padding: 70px 0 83px 0;
+  }
+}
+
+.skills__programs {
+  display: flex;
+  justify-content: space-between;
+
+  .skills__programs-list {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  p {
+    padding: 22px 0 0 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: $c-grey;
+    min-height: 97px;
+  }
+}
+
+.stars {
+  display: flex;
+  width: 148px;
+  justify-content: space-between;
+
+  .star {
+    height: 26px;
+    width: 26px;
+    background-image: url(../sources/img/Star\ \(1\).svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+
+  .active {
+    height: 26px;
+    width: 26px;
+    background-image: url(../sources/img/Star.svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+}
+
+.portfolio {
+  padding: 85px 15px 0 15px;
+  background-color: $c-light-grey;
+
+  h2 {
+    padding-bottom: 50px;
+  }
+
+  img {
+    max-width: 936.24px;
+  }
+
+  a {
+    display: block;
+    padding: 45px 0 100px 0;
+    color: black;
+    font-size: 18px;
+  }
+}
+
+
+.footer-wrap {
+  padding: 115px 0 105px 0;
+
+  p {
+    padding: 35px;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 342px;
+    margin: 0 auto;
+    padding: 80px 0 0 0;
+
+    a {
+      &:hover {
+        transform: scale(1.2);
+        transition: all 0.5s;
+      }
+    }
+  }
+
+  .btn {
+    display: block;
+    line-height: 42px;
+    width: 180.5px;
+    background-color: black;
+    border-radius: 40px;
+    margin: 0 auto;
+    color: white;
+    font-family: GilroyBold;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      transform: scale(1.06);
+      opacity: 0.75;
+      transition: all 0.5s;
+    }
+  }
+
+  @media (min-width : 768px) and (max-width : 1024px) {
+    .overview {
+      padding: 60px 0 57px;
+    }
+
+    .skills {
+      padding: 50px 15px 0px;
+
+      p {
+        padding: 35px 0 40px;
+      }
+
+      .skills__programs {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .skills__programs-list {
+          p {
+            padding: 18px 0;
+            min-height: 76px;
+          }
+        }
+
+        .skills__programs-list {
+          flex: 0 1 50%;
+          padding-bottom: 60px;
+
+          .stars {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .portfolio {
+      a {
+        padding: 35px 0 70px;
+      }
+    }
+
+    .footer-wrap {
+      padding: 57px 0 50px;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 10px;
+    }
+
+    .main-info {
+      padding: 20px 10px 20px;
+
+      h1 {
+        font-size: 34px;
+        line-height: 45px;
+      }
+
+    }
+
+
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .overview {
+      margin-top: 44px;
+      padding: 25px 10px 25px 10px;
+
+      p {
+        padding: 20px 0 0 0;
+
+        &:first-of-type {
+          padding: 20px 0 0 0;
+        }
+      }
+
+    }
+
+    .main-info__lang-switcher,
+    .header-wrapper {
+      display: none;
+    }
+
+    .skills {
+      padding: 35px 5px 0px;
+
+      p {
+        padding: 15px 0 30px;
+      }
+
+      .skills__programs {
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 100px;
+        margin: 0 auto;
+
+        .skills__programs-list {
+          padding-bottom: 40px;
+        }
+
+        p {
+          min-height: 50px;
+          padding: 9px 0 9px;
+        }
+      }
+
+    }
+
+    .portfolio {
+      padding: 35px 10px 0;
+
+      h2 {
+        padding-bottom: 35px;
+      }
+
+      a {
+        padding: 25px 0 40px;
+      }
+    }
+
+    .footer-wrap {
+      padding: 40px 0 10px;
+
+      p {
+        padding: 20px;
+      }
+
+      .icons {
+        padding: 50px 10px 0 10px;
+      }
+    }
+  }
+}
